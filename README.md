@@ -38,3 +38,5 @@ To run the application, ensure you have the following dependencies installed:
 - Start the WPF application to visualize soldier location updates.
 
 ### Database Diagram
+![Capture](https://github.com/user-attachments/assets/cbc033d8-eb14-4b16-a0a5-755216ea29d1)
+
