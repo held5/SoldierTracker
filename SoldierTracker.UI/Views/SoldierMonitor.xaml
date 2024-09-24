@@ -1,0 +1,52 @@
+﻿<Window x:Class="SoldierTracker.UI.Views.SoldierMonitor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoldierTracker.UI.Views"
+        xmlns:viewModels="clr-namespace:SoldierTracker.UI.ViewModels"
+        mc:Ignorable="d"
+        Title="Soldier Tracker" Height="450" Width="800">
+    <StackPanel>
+        <!-- Button to start location updates -->
+        <Button Content="Start Location Updates" 
+            Command="{Binding StartLocationUpdatesCommand}" 
+            Width="150" Height="30" Margin="10"/>
+
+        <TextBlock Text="Soldiers Locations:" FontWeight="Bold" FontSize="16" Margin="10" />
+
+        <!-- TreeView displaying soldiers and their locations -->
+        <TreeView ItemsSource="{Binding Soldiers}" Margin="10">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Locations}">
+                    <StackPanel Margin="5">
+                        <!-- Soldier ID with more info button -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="{Binding SoldierId, StringFormat='Soldier ID: {0}'}" 
+                                   FontWeight="Bold" FontSize="14"/>
+                            <Button Content="More Info" 
+                                Command="{Binding DataContext.ShowSoldierInfoCommand, RelativeSource={RelativeSource AncestorType=TreeView}}" 
+                                CommandParameter="{Binding SoldierId}" 
+                                Margin="10,0,0,0" 
+                                Width="100"/>
+                        </StackPanel>
+
+                        <!-- Scrollable area for soldier locations -->
+                        <ScrollViewer Height="100" VerticalScrollBarVisibility="Auto" Margin="0,5,0,0">
+                            <ItemsControl ItemsSource="{Binding Locations}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Margin="2,0">
+                                            <TextBlock Text="{Binding Latitude, StringFormat='Latitude: {0:F6}'}" Width="120"/>
+                                            <TextBlock Text="{Binding Longitude, StringFormat='Longitude: {0:F6}'}" Width="120"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+    </StackPanel>
+</Window>

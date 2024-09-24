@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoldierTracker.Domain", "SoldierTracker.Domain\SoldierTracker.Domain.csproj", "{D0BE8600-51D3-4662-BB13-274AD74F7BE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoldierTracker.Application", "SoldierTracker.Application\SoldierTracker.Application.csproj", "{3460950D-0542-4233-B708-6AC3868E7D73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoldierTracker.Infrastructure", "SoldierTracker.Infrastructure\SoldierTracker.Infrastructure.csproj", "{B3EE27AA-7BE8-420B-97D9-10CDDD2A16F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorHub.API", "SensorHub.API\SensorHub.API.csproj", "{FDB92AEA-03D6-4364-9AD6-A5C0B54EED6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoldierTracker.UI", "SoldierTracker.UI\SoldierTracker.UI.csproj", "{E230E463-EC32-40D4-BE7F-D796C0AB4233}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoldierTracker.UnitTests", "SoldierTracker.UnitTests\SoldierTracker.UnitTests.csproj", "{1B367B58-CBCC-45E9-A436-9066A886963E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoldierTracker.IntegrationTests", "SoldierTracker.IntegrationTests\SoldierTracker.IntegrationTests.csproj", "{D666C98E-C0DB-4527-9B45-D6D8D5920C26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0BE8600-51D3-4662-BB13-274AD74F7BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BE8600-51D3-4662-BB13-274AD74F7BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BE8600-51D3-4662-BB13-274AD74F7BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BE8600-51D3-4662-BB13-274AD74F7BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3460950D-0542-4233-B708-6AC3868E7D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3460950D-0542-4233-B708-6AC3868E7D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3460950D-0542-4233-B708-6AC3868E7D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3460950D-0542-4233-B708-6AC3868E7D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EE27AA-7BE8-420B-97D9-10CDDD2A16F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EE27AA-7BE8-420B-97D9-10CDDD2A16F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EE27AA-7BE8-420B-97D9-10CDDD2A16F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EE27AA-7BE8-420B-97D9-10CDDD2A16F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB92AEA-03D6-4364-9AD6-A5C0B54EED6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB92AEA-03D6-4364-9AD6-A5C0B54EED6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB92AEA-03D6-4364-9AD6-A5C0B54EED6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB92AEA-03D6-4364-9AD6-A5C0B54EED6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E230E463-EC32-40D4-BE7F-D796C0AB4233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E230E463-EC32-40D4-BE7F-D796C0AB4233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E230E463-EC32-40D4-BE7F-D796C0AB4233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E230E463-EC32-40D4-BE7F-D796C0AB4233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B367B58-CBCC-45E9-A436-9066A886963E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B367B58-CBCC-45E9-A436-9066A886963E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B367B58-CBCC-45E9-A436-9066A886963E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B367B58-CBCC-45E9-A436-9066A886963E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D666C98E-C0DB-4527-9B45-D6D8D5920C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D666C98E-C0DB-4527-9B45-D6D8D5920C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D666C98E-C0DB-4527-9B45-D6D8D5920C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D666C98E-C0DB-4527-9B45-D6D8D5920C26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {859CAB25-7479-4ED8-B7FA-A548251C8D7B}
+	EndGlobalSection
+EndGlobal
