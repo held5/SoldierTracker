@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using SoldierTracker.Application.Models;
+using SoldierTracker.Infrastructure;
 using SoldierTracker.UI.Utility;
 using SoldierTracker.UI.ViewModels;
 using SoldierTracker.UI.Views;

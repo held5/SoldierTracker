@@ -1,11 +1,12 @@
-﻿using SoldierTracker.Application.Models;
+﻿using SoldierTracker.Application.Abstractions;
+using SoldierTracker.Application.Models;
 using SoldierTracker.Domain.Entities;
 using SoldierTracker.Domain.Interfaces;
 using System.Collections.Concurrent;
 
 namespace SoldierTracker.Application.Services
 {
-    internal class SoldierService : ISoldierService
+    internal sealed class SoldierService : ISoldierService
     {
         private readonly ISignalRService _signalRService;
         private readonly IUnitOfWork _unitOfWork;
@@ -47,7 +48,7 @@ namespace SoldierTracker.Application.Services
             await _signalRService.StartConnectionAsync();
 
             // Task to wait and proccess received data
-            _ = Task.Run(ProcessIncomingDataAsync);
+            _ = Task.Factory.StartNew(ProcessIncomingDataAsync, TaskCreationOptions.LongRunning);
 
             // Handler for data received
             _signalRService.On<SoldierData>(topicName, OnLocationReceived);

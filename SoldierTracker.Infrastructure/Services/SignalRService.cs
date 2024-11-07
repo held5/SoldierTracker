@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Options;
+using SoldierTracker.Application.Abstractions;
 using SoldierTracker.Application.Models;
 
-namespace SoldierTracker.Application.Services
+namespace SoldierTracker.Infrastructure.Services
 {
     internal class SignalRService : ISignalRService, IDisposable
     {

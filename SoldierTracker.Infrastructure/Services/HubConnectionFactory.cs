@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
 
-namespace SoldierTracker.Application.Services
+namespace SoldierTracker.Infrastructure.Services
 {
     internal class HubConnectionFactory : IHubConnectionFactory
     {
