@@ -7,19 +7,22 @@ namespace SensorHub.API
     {
         private readonly ILogger<Worker> _logger;
         private readonly IHubContext<MessageHub> _messageHub;
+        private readonly PeriodicTimer _periodicTimer;
         // For simulation purposes
         private const string SoldierCode = "ABC";
         private const string SensorName = "XSCJDH";
+        private int _workerCount = 0;
 
         public Worker(ILogger<Worker> logger, IHubContext<MessageHub> messageHub)
         {
             _logger = logger;
             _messageHub = messageHub;
+            _periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(5));
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
+            while (await _periodicTimer.WaitForNextTickAsync(stoppingToken))
             {
                 try
                 {
@@ -28,7 +31,13 @@ namespace SensorHub.API
                     var soldier = GenerateSoldierCoordinates();
                     await _messageHub.Clients.All.SendAsync("SoldierLocationUpdate", soldier);
 
-                    await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
+                    _workerCount++;
+                    _logger.LogInformation("Data number sent: {DataCount}", _workerCount);
+
+                    if (_workerCount == 1500)
+                    {
+                        await Task.Delay(TimeSpan.FromSeconds(10));
+                    }
                 }
                 catch (Exception ex)
                 {

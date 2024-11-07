@@ -1,4 +1,5 @@
 ﻿using NSubstitute;
+using SoldierTracker.Application.Abstractions;
 using SoldierTracker.Application.Models;
 using SoldierTracker.Application.Services;
 using SoldierTracker.Domain.Entities;

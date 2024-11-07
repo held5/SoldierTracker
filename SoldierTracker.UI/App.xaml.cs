@@ -37,7 +37,7 @@ namespace SoldierTracker.UI
         {
             return new ServiceCollection()
                .AddInfrastructureServices(Configuration)
-               .AddApplicationServices(Configuration)
+               .AddApplicationServices()
                .AddUIServices()
                .BuildServiceProvider();
         }

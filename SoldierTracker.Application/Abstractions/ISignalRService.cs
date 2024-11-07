@@ -1,4 +1,4 @@
-﻿namespace SoldierTracker.Application.Services
+﻿namespace SoldierTracker.Application.Abstractions
 {
     public interface ISignalRService
     {

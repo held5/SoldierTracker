@@ -1,4 +1,4 @@
-﻿namespace SoldierTracker.Application.Models
+﻿namespace SoldierTracker.Infrastructure
 {
     public class SensorHubSettings
     {
