@@ -2,6 +2,7 @@
 using NSubstitute;
 using SoldierTracker.Application.Models;
 using SoldierTracker.Application.Services;
+using SoldierTracker.Infrastructure;
 using SoldierTracker.UI.Utility;
 using SoldierTracker.UI.ViewModels;
 using System.Windows;
@@ -25,7 +26,7 @@ namespace SoldierTracker.UnitTests.UI
         [SetUp]
         public void Setup()
         {
-            var sensorHubSettings = new SensorHubSettings { HubTopic = HubTopic };
+            var sensorHubSettings = new SensorHubSettings { HubTopic = HubTopic, HubUrl = "https://testapp.com/hub" };
             _sensorHubSettings = Substitute.For<IOptions<SensorHubSettings>>();
             _sensorHubSettings.Value.Returns(sensorHubSettings);
 

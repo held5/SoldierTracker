@@ -2,8 +2,8 @@
 {
     public class SensorHubSettings
     {
-        public string HubUrl { get; set; }
+        public required string HubUrl { get; set; }
 
-        public string HubTopic { get; set; }
+        public required string HubTopic { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
-using SoldierTracker.Application.Services;
+using SoldierTracker.Infrastructure.Services;
 
-namespace SoldierTracker.UnitTests.Application
+namespace SoldierTracker.UnitTests.Infrastructure
 {
     /// <summary>
     ///     Class containing unit tests for the <see cref="HubConnectionFactory"/> class.
